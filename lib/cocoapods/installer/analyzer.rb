@@ -20,7 +20,7 @@ module Pod
 
       # @return [String] The version of iOS which requires binaries with only 64-bit architectures
       #
-      IOS_64_BIT_ONLY_VERSION = Version.new('14.5')
+      IOS_64_BIT_ONLY_VERSION = Version.new('11.0')
 
       # @return [Integer] The Xcode object version until which 64-bit architectures should be manually specified
       #
