@@ -20,7 +20,7 @@ module Pod
 
       # @return [String] The version of iOS which requires binaries with only 64-bit architectures
       #
-      IOS_64_BIT_ONLY_VERSION = Version.new('11.0')
+      IOS_64_BIT_ONLY_VERSION = Version.new('14.5')
 
       # @return [Integer] The Xcode object version until which 64-bit architectures should be manually specified
       #
@@ -865,7 +865,7 @@ module Pod
           Version.new(library_spec.deployment_target(platform_name) || default)
         end.max
         if platform_name == :ios && build_type.framework?
-          minimum = Version.new('11.0')
+          minimum = Version.new('4.5')
           deployment_target = [deployment_target, minimum].max
         end
         Platform.new(platform_name, deployment_target)
